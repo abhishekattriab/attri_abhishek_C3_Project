@@ -91,5 +91,24 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    /* <<<<<<<<<<<< TDD requirements >>>>>>>>>>>>>>>>>>>>>>
+
+        Requirements:
+        Once the user has selected a restaurant, he/she can select the items available
+        in that restaurant. The total value of the selected should be calculated/updated.
+
+    */
+
+    //<<<<<<<<<<<< TDD failing test case >>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void select_item_from_list_should_not_return_total_order_value() {
+
+        setupRestaurant();
+        List<String> selectedItemNames = Arrays.asList("Vegetable lasagne", "Sweet corn soup");
+        int totalOrderValue = restaurant.getTotalOrderValue(selectedItemNames);
+        assertEquals(388, totalOrderValue);
+
+    }
+
 
 }
