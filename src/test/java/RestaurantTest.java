@@ -106,9 +106,19 @@ class RestaurantTest {
         setupRestaurant();
         List<String> selectedItemNames = Arrays.asList("Vegetable lasagne", "Sweet corn soup");
         int totalOrderValue = restaurant.getTotalOrderValue(selectedItemNames);
-        assertEquals(388, totalOrderValue);
+        assertEquals(100, totalOrderValue);
 
     }
 
 
+    //<<<<<<<<<<<< TDD passing test case >>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void select_item_from_list_should_return_total_order_value() {
+
+        setupRestaurant();
+        List<String> selectedItemNames = Arrays.asList("Vegetable lasagne", "Sweet corn soup");
+        int totalOrderValue = restaurant.getTotalOrderValue(selectedItemNames);
+        assertEquals(388, totalOrderValue);
+
+    }
 }
